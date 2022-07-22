@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0px;
+   
+}
+body{
+    min-height: 100vh;
+    background: radial-gradient(43.46% 80.54% at 50% 50%,
+    #2d3445 0%,
+    #18181f 100% );
+    
+    padding: 0 5% 0 10%;
+    
+}
+h2{
+    color:white;
+}
+h1{
+    align-self: end;
+    color: white;
+    font-size: 45px;
+}
+.container{
+    margin-top: 30px;
+    margin-left: 30px;
+    height: 100px;
+    padding: 10px 20px;
+}
+
+   #button{
+    height: 100px;
+    width: 200px;
+    margin-left: 200px;
+    color: white;
+    font-size: 50px;
+    background-color: green;
+   }
+   #button1{
+    height: 100px;
+    width: 200px;
+    margin-left: 200px;
+    font-size: 50px;
+    color: white;
+    background-color: green;
+   }
+   #button:hover{
+    background-color: black;
+    border-radius: 20px;
+    
+   }
+   #button1:hover{
+    background-color:black;
+    border-radius: 20px;
+   }
