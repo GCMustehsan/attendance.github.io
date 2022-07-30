@@ -12,7 +12,7 @@ $fetch=mysqli_fetch_assoc($select_q);
 <title>Attendance Management System</title>
 <meta charset="UTF-8">
   
-  
+  <link rel="stylesheet" type="text/css" href="css/main.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
    
@@ -28,13 +28,11 @@ $fetch=mysqli_fetch_assoc($select_q);
 
 <header>
 
-  <h1>Attendance Management System <br>Update</h1>
-  <div class="navbar">
-<a href="user.php" style="text-decoration:none;">Back</a>
+  <h1>Attendance Management System</h1>
+<div class="navbar">
+<a href="admin.php" style="text-decoration:none;">Back</a>
 
 </div>
-
-
 </header>
 <center>
 <div class="content">
@@ -89,10 +87,10 @@ if($picture !="")
   $update="UPDATE signup set fname='$fullname', email='$email', picture='$picture', username='$username' where regid='$id'"; 
   $update_q=mysqli_query($con,$update);
   
-  header('location:user.php');
+  header('location:admin.php');
 }
 else{
-echo "Please select the image!!!";
+echo "please select the image";
 }
 }
 ?>

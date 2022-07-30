@@ -6,14 +6,14 @@ if(isset($_POST['login']))
 	$username=$_POST['username'];
 	$password=$_POST['password'];
 	
-	$sql="select  regid,username from  signup where username='$username' and password='$password'";
+	$sql="select * from  login where username='$username' and password='$password'";
 	$result=mysqli_query($con,$sql);
 	if($result->num_rows>0)
 	{
 			$row=mysqli_fetch_assoc($result);
 			$_SESSION['username']=$row['username'];
-			$_SESSION['regid']=$row['regid'];
-			header('location:user.php');
+			
+			header('location:admin.php');
 			
 	}
 	else{
@@ -49,10 +49,12 @@ if(isset($_POST['login']))
 
 </header>
 
-<h3>Student Login Panel</h3>
+<h3>Admin Login Panel</h3>
 <header>
+
+
 <div class="navbar">
-<a href="index.php" style="text-decoration:none;">Home</a>
+<a href="../index.php" style="text-decoration:none;">Home</a>
 </div>
 
 </header>
@@ -74,15 +76,10 @@ if(isset($_POST['login']))
 			      <input type="password" name="password"  class="form-control" id="input1" placeholder="Your Password" />
 			    </div>
 			</div>
-			<a href=""><input type="submit" class="btn btn-success col-md-3 col-md-offset-7" style="border-radius:0%" value="Login" name="login" id="login"/>
+			<a href="user.php"><input type="submit" class="btn btn-success col-md-3 col-md-offset-7" style="border-radius:0%" value="Login" name="login" id="login"/>
 		</form>
 	</div>
 </div>
-
-
-
-<p><strong><a href="signup.php" style="text-decoration:none;">Create New Account</a></strong></p>
-
 </center>
 </body>
 </html>
